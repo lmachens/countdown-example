@@ -1,14 +1,12 @@
 export function Countdown() {
   const container = document.createElement("div");
-  let timeLeft = 3;
-  container.innerText = timeLeft;
+  container.innerText = "0";
 
   const intervalId = setInterval(() => {
-    timeLeft--;
-    container.innerText = timeLeft;
-    if (timeLeft === 0) {
+    if (container.innerText === "0") {
       clearInterval(intervalId);
-      alert("Time's over");
+    } else {
+      container.innerText = container.innerText - 1;
     }
   }, 1000);
   return container;
