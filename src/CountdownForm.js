@@ -2,6 +2,7 @@ export function CountdownForm(onSubmit) {
   const input = document.createElement("input");
   input.type = "number";
   input.required = true;
+  input.min = 1;
 
   const button = document.createElement("button");
   button.innerText = "GO! 😛";
